@@ -111,11 +111,5 @@ func processFile(filename string, in io.Reader, out io.Writer, stdin bool) error
 		return err
 	}
 
-	if *write {
-		err = ioutil.WriteFile(filename, res, 0644)
-	} else {
-		_, err = out.Write(res)
-	}
-
 	return err
 }
