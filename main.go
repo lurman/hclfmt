@@ -10,8 +10,6 @@ import (
 	"path/filepath"
 	"runtime/pprof"
 	"strings"
-
-	"github.com/hashicorp/hcl/tree/hcl1/hcl/printer"
 )
 
 const Version = "0.1.0"
@@ -109,11 +107,6 @@ func processFile(filename string, in io.Reader, out io.Writer, stdin bool) error
 	}
 
 	src, err := ioutil.ReadAll(in)
-	if err != nil {
-		return err
-	}
-
-	res, err := printer.Format(src)
 	if err != nil {
 		return err
 	}
