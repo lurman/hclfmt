@@ -106,10 +106,4 @@ func processFile(filename string, in io.Reader, out io.Writer, stdin bool) error
 		in = f
 	}
 
-	src, err := ioutil.ReadAll(in)
-	if err != nil {
-		return err
-	}
-
-	return err
 }
