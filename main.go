@@ -5,7 +5,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime/pprof"
@@ -105,5 +104,7 @@ func processFile(filename string, in io.Reader, out io.Writer, stdin bool) error
 		defer f.Close()
 		in = f
 	}
+	
+	return nil
 
 }
