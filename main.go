@@ -11,7 +11,7 @@ import (
 	"runtime/pprof"
 	"strings"
 
-	"github.com/hashicorp/hcl/hcl/printer"
+	"github.com/hashicorp/hcl/tree/hcl1/hcl/printer"
 )
 
 const Version = "0.1.0"
